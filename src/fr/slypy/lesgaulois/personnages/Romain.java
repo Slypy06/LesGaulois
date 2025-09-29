@@ -10,6 +10,14 @@ public class Romain {
 		this.nom = nom;
 		this.force = force;
 		
+		assert isInvariantVerified();
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Romain r = new Romain("minus", -6);
+		
 	}
 
 	public String getNom() {
@@ -32,6 +40,10 @@ public class Romain {
 
 	public void recevoirCoup(int force) {
 		
+		assert force > 0;
+		
+		int prevForce = this.force;
+		
 		this.force -= force;
 		
 		if (this.force > 0) {
@@ -44,8 +56,15 @@ public class Romain {
 		
 		} 
 		
+		assert (prevForce - this.force) > 0;
+		
 	}
 	
+	private boolean isInvariantVerified() {
+		
+		return force >= 0;
+		
+	}
 	
 	@Override
 	public String toString() {
