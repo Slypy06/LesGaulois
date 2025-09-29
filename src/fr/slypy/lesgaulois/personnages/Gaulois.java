@@ -1,10 +1,13 @@
 package fr.slypy.lesgaulois.personnages;
 
+import fr.slypy.lesgaulois.Village;
+
 public class Gaulois {
 	
 	private int force;
 	private String nom;
 	private int effetPotion = 1;
+	private Village village;
 	
 	public Gaulois(String nom, int force) {
 
@@ -52,7 +55,31 @@ public class Gaulois {
 		this.effetPotion = effetPotion;
 		
 	}
+
+	public void setVillage(Village village) {
+		
+		this.village = village;
+		
+	}
 	
+	public void sePresenter() {
+		
+		if(village == null) {
+			
+			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+			
+		} else if(village.getChef().equals(this)) {
+			
+			parler("Bonjour, je m'appelle " + nom + ". Je suis le chef du village " + village.getNom() + ".");
+			
+		} else {
+			
+			parler("Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom() + ".");
+			
+		}
+		
+	}
+
 	@Override
 	public String toString() {
 		

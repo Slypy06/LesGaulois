@@ -66,7 +66,7 @@ public class Druide {
 		
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		
 		return "Le Druide " + nom + " : ";
 		

@@ -24,7 +24,7 @@ public class Romain {
 		
 	}
 
-	private String prendreParole() {
+	public String prendreParole() {
 		
 		return "Le romain " + nom + " : ";
 		
