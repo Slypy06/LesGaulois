@@ -1,10 +1,15 @@
 package fr.slypy.lesgaulois.personnages;
 
-import fr.slypy.lesgaulois.Village;
+import fr.slypy.lesgaulois.objets.Equipement;
+import fr.slypy.lesgaulois.objets.Musee;
+import fr.slypy.lesgaulois.village.Village;
 
 public class Gaulois {
 	
+	//private int force;
 	private int force;
+	private int nbTrophees;
+	private Equipement[] trophees = new Equipement[100];
 	private String nom;
 	private int effetPotion = 1;
 	private Village village;
@@ -42,11 +47,24 @@ public class Gaulois {
 		
 	}
 	
+//	public void frapper(Romain romain) {
+//		
+//		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+//		romain.recevoirCoup((force * effetPotion) / 3);
+//		effetPotion -= effetPotion > 1 ? 1 : 0;
+//		
+//	}
+	
 	public void frapper(Romain romain) {
 		
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup((force * effetPotion) / 3);
-		effetPotion -= effetPotion > 1 ? 1 : 0;
+		Equipement[] tropheesObtenus = romain.recevoirCoup((force / 3) * effetPotion);
+		
+		for (int i = 0; tropheesObtenus != null && i < tropheesObtenus.length; i++,nbTrophees++) {
+			
+			this.trophees[nbTrophees] = tropheesObtenus[i];
+		
+		}
 		
 	}
 
@@ -75,6 +93,28 @@ public class Gaulois {
 		} else {
 			
 			parler("Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom() + ".");
+			
+		}
+		
+	}
+	
+	public void faireUneDonnation(Musee musee) {
+		
+		if(nbTrophees > 0) {
+			
+			StringBuilder texte = new StringBuilder("Je donne au musée tous mes trophees : ");
+			
+			for(int i = 0; i < nbTrophees; i++) {
+				
+				texte.append('\n').append(" - ").append(trophees[i]);
+				musee.donnerTrophee(this, trophees[i]);
+				trophees[i] = null;
+				
+			}
+			
+			nbTrophees = 0;
+			
+			parler(texte.toString());
 			
 		}
 		

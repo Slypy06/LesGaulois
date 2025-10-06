@@ -1,4 +1,4 @@
-package fr.slypy.lesgaulois;
+package fr.slypy.lesgaulois.village;
 
 import fr.slypy.lesgaulois.personnages.Gaulois;
 
