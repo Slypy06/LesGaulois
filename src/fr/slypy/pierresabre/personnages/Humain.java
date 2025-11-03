@@ -1,4 +1,4 @@
-package fr.slypy.lesgaulois.personnages;
+package fr.slypy.pierresabre.personnages;
 
 public class Humain {
 	

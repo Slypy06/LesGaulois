@@ -1,9 +1,9 @@
-package fr.slypy.lesgaulois.histoire;
+package fr.slypy.pierresabre.histoire;
 
-import fr.slypy.lesgaulois.personnages.Commercant;
-import fr.slypy.lesgaulois.personnages.Humain;
-import fr.slypy.lesgaulois.personnages.Ronin;
-import fr.slypy.lesgaulois.personnages.Yakuza;
+import fr.slypy.pierresabre.personnages.Commercant;
+import fr.slypy.pierresabre.personnages.Humain;
+import fr.slypy.pierresabre.personnages.Ronin;
+import fr.slypy.pierresabre.personnages.Yakuza;
 
 public class HistoireTP4 {
 
