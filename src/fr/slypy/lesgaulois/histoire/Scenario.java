@@ -40,6 +40,7 @@ public class Scenario {
 		Musee musee = new Musee();
 		asterix.faireUneDonnation(musee);
 		
+		System.out.println();
 		System.out.println(musee.extraireInstructionsOCaml());
 
 	}
