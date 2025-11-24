@@ -2,6 +2,7 @@ package fr.slypy.pierresabre.histoire;
 
 import fr.slypy.pierresabre.personnages.Commercant;
 import fr.slypy.pierresabre.personnages.Ronin;
+import fr.slypy.pierresabre.personnages.Samourai;
 import fr.slypy.pierresabre.personnages.Yakuza;
 
 public class HistoireTP5 {
@@ -22,6 +23,11 @@ public class HistoireTP5 {
 		marco.listerConnaissance();
 		roro.listerConnaissance();
 		yaku.listerConnaissance();
+		
+		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
+		
+		akimoto.direBonjour();
+		akimoto.boire("thé");
 		
 	}
 	
