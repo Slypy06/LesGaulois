@@ -20,7 +20,7 @@ public class HistoireTP4 {
 		c.direBonjour();
 		/*c.seFaireExtorquer();
 		c.recevoir(15);
-		c.boire();+*/
+		c.boire();*/
 		
 		Yakuza y = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
 		y.direBonjour();
