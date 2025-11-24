@@ -1,6 +1,7 @@
 package fr.slypy.pierresabre.histoire;
 
 import fr.slypy.pierresabre.personnages.Commercant;
+import fr.slypy.pierresabre.personnages.GrandMere;
 import fr.slypy.pierresabre.personnages.Ronin;
 import fr.slypy.pierresabre.personnages.Samourai;
 import fr.slypy.pierresabre.personnages.Traitre;
@@ -46,6 +47,17 @@ public class HistoireTP5 {
 		masako.faireLeGentil();
 		
 		masako.faireConnaissanceAvec(roro);
+		
+		System.out.println("\n\n\n");
+		
+		GrandMere grandMere = new GrandMere("Grand-Mère", 10);
+		grandMere.faireConnaissanceAvec(akimoto);
+		grandMere.faireConnaissanceAvec(yaku);
+		grandMere.faireConnaissanceAvec(masako);
+		grandMere.faireConnaissanceAvec(kumi);
+		grandMere.faireConnaissanceAvec(marco);
+		grandMere.faireConnaissanceAvec(chonin);
+		grandMere.ragoter();
 		
 	}
 	

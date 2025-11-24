@@ -75,7 +75,7 @@ public class Humain {
 		
 	}
 	
-	private void memoriser(Humain h) {
+	protected void memoriser(Humain h) {
 		
 		if(nbConnaissance < TAILLE_MEMOIRE) {
 			
