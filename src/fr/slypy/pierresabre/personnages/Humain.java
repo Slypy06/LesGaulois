@@ -7,8 +7,8 @@ public class Humain {
 	private String nom;
 	private String boissonFavorite;
 	private int argent;
-	private int nbConnaissance;
-	private Humain[] memoire = new Humain[TAILLE_MEMOIRE];
+	protected int nbConnaissance;
+	protected Humain[] memoire = new Humain[TAILLE_MEMOIRE];
 	
 	public Humain(String nom, String boissonFavorite, int argent) {
 

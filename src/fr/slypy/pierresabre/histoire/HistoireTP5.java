@@ -3,6 +3,7 @@ package fr.slypy.pierresabre.histoire;
 import fr.slypy.pierresabre.personnages.Commercant;
 import fr.slypy.pierresabre.personnages.Ronin;
 import fr.slypy.pierresabre.personnages.Samourai;
+import fr.slypy.pierresabre.personnages.Traitre;
 import fr.slypy.pierresabre.personnages.Yakuza;
 
 public class HistoireTP5 {
@@ -28,6 +29,23 @@ public class HistoireTP5 {
 		
 		akimoto.direBonjour();
 		akimoto.boire("thé");
+		
+		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
+
+		masako.faireLeGentil();
+		masako.ranconner(kumi);
+		masako.ranconner(chonin);
+		masako.ranconner(marco);
+		
+		akimoto.faireConnaissanceAvec(masako);
+	
+		masako.ranconner(marco);
+		
+		masako.faireConnaissanceAvec(yaku);
+		
+		masako.faireLeGentil();
+		
+		masako.faireConnaissanceAvec(roro);
 		
 	}
 	
